@@ -16,6 +16,7 @@ namespace MVC_Sample_Project.Controllers
             return View();
         }
 
+        //In this HttpPost Return String Method we use the @Ajax.Beginform Helper
         [HttpPost]
         public string Index(SampleViewModel m)
         {
