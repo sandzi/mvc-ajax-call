@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<div>
+    @using (Ajax.BeginForm("Index","Sample01",null,new AjaxOptions { UpdateTargetId = "lblResult", InsertionMode = InsertionMode.Replace, HttpMethod = "POST" },new { id = "SampleForm" }))
+    {
+        <span>Enter First no:</span>@Html.TextBox("txtFirstNo")<br />
+        <span>Enter Second no:</span>@Html.TextBox("txtSecondNo")<br />
+            <span id="lblResult"></span>
+            <button type="submit">Show</button>
+    }
+
+</div>
+@section scripts{
+
+}
