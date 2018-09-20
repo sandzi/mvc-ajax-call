@@ -4,28 +4,21 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h1>Example 02 - Simple DataTable Output by Web API & JS</h1>
+<p>In This example i show you how to get Data from EntityFramework Database into jQuery Datatables.</p>
+<table id="products" class="table table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Date Added</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
 
-<span>Enter First no:</span>@Html.TextBox("txtFirstNo")<br />
-<span>Enter Second no:</span>@Html.TextBox("txtSecondNo")<br />
-<span id="lblResult"></span>
-<button type="button" onclick="doSum();">Show</button>
+</table>
+
 @section scripts{
-<script>
-    function doSum() {
-        var v1 = $("#txtFirstNo").val();
-        var v2 = $("#txtSecondNo").val();
 
-        $.ajax({
-            url: "@Url.Action("Index","Sample02")",
-            method: "POST",
-            cache: false,
-            data: {txtFirstNo:v1,txtSecondNo:v2}
-        }).done(function (d) {
-                $("#lblResult").text(d);
-            });
-        }
-    
-
-</script>
 }

@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Example 01 - Simple Ajax Call</h2>
 
 <div>
     @using (Ajax.BeginForm("Index","Sample01",null,new AjaxOptions { UpdateTargetId = "lblResult", InsertionMode = InsertionMode.Replace, HttpMethod = "POST" },new { id = "SampleForm" }))
